@@ -6,5 +6,7 @@ const lukuX2 = prompt('Syötä toinen koordinaattipisteelle X');
 const lukuY2 = prompt('Syötä toinen koordinaattipisteelle Y');
 const distance = Math.sqrt((lukuX2 - lukuX1) ^ (2 + (lukuY2 - lukuY1)) ^ 2);
 
-const lyhennys = distance.split(' ');
-document.getElementById('vastaus').innerHTML = lyhennys[3];
+const splitNum = distance.toString().split('.');
+const integerPart = Number(splitNum[0]);
+
+document.getElementById('vastaus').innerHTML = integerPart;

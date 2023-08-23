@@ -7,19 +7,16 @@ const sivuC = prompt('Anna kolmion kolmannen sivun pituus');
 let tyyppi = '';
 // jos sivut ovat kaikki yhtä pitkiä ->tasasivuinen kolmio
 
-if (sivuA === sivuB && sivuB === sivuC)
-  {
-    tyyppi = 'tasasivuinen kolmio';
-  }
+if (sivuA === sivuB && sivuB === sivuC) {
+  tyyppi = 'tasasivuinen kolmio';
+}
 // jos kaksi sivua ovat yhtä pitkiä -> tasakylkinen kolmio
-else if (sivuA === sivuB || sivuA == sivuC || sivuB == sivuC)
-  {
-   tyyppi = 'tasakylkinen kolmio';
-  }
+else if (sivuA === sivuB || sivuA == sivuC || sivuB == sivuC) {
+  tyyppi = 'tasakylkinen kolmio';
+}
 // jos sivut ovat kaikki eri pituiset > epäsäännöllinen kolmio
-else if (sivuA !== sivuB && sivuC ! == sivuA && sivuC !==sivuB)
-  {
-    tyyppi = 'epäsäännöllinen kolmio';
-  }
+else if (sivuA !== sivuB && sivuC !== sivuA && sivuC !== sivuB) {
+  tyyppi = 'epäsäännöllinen kolmio';
+}
 
-document.getElementById('Kohde')insertAdjacentHTML('beforeend', tyyppi);
+document.getElementById('Kohde').insertAdjacentHTML('beforeend', tyyppi);
